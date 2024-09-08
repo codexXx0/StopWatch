@@ -11,6 +11,7 @@ let startBtn = document.getElementById("start")
 let stopBtn = document.getElementById("stop")
 let resetBtn = document.getElementById("reset")
 let isPaused = false
+let hideP = document.querySelectorAll("#hide")
 
 startBtn.onclick = function () {
     
@@ -21,7 +22,6 @@ startBtn.onclick = function () {
                 let secondsText = document.getElementById("s").textContent
                 let minutesText = document.getElementById("m").textContent
                 let hoursText = document.getElementById("h").textContent
-                let hideP = document.querySelectorAll("#hide")
             
                 if ( millisecondsText == 99) {
                     document.getElementById("ms").textContent = 0
@@ -97,11 +97,33 @@ setInterval(() => {
     let now = new Date();
     let hoursW = now.getHours();
     let minutesW = now.getMinutes();
-    let secondsW = now.getSeconds();
     let hoursWatch = document.getElementById("hW");
     let minutesWatch = document.getElementById("mW");
+    let hideWH = document.getElementsByClassName("watchPH")[0]
+    let hideWM = document.getElementById("hideWM")
 
-    hoursWatch.textContent =  hoursW ;
-    minutesWatch.textContent = minutesW;
+    hoursWatch.textContent =  hoursW  ;
+    minutesWatch.textContent = minutesW ;
 
-}, 50)
+    console.log(hoursWatch.textContent)
+    console.log(minutesWatch.textContent)
+    console.log(hideWM)
+    console.log(hideWH)
+
+    if (hoursWatch.textContent < 10) {
+        hideWH.classList.remove("hide")
+        console.log("removed Hours")
+    } else {
+        hideWH.classList.add("hide")
+        console.log("added Hours")
+    }
+
+    if (minutesWatch.textContent < 10) {
+        hideWM.classList.remove("hide")
+        console.log("removed Minutes")
+    } else {
+        hideWM.classList.add("hide")
+        console.log("added Minutes")
+    }
+
+}, 20)
