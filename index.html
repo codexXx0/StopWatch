@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="imgs/3937859.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Clock</title>
+</head>
+<body>
+    <header>
+        <h1>CODEX</h1>
+        <img src="imgs/3937859.png" alt="">
+    </header>
+    <div class="main">
+        <div class="watch">
+            <img src="imgs/399494_544_051_54-removebg-preview.png" alt="">
+            <div class="watchBody">
+                <div class="top">
+                    <i class="fa-solid fa-battery-three-quarters"></i>
+                    Online watch
+                </div>
+                <div class="mid">
+                    <div class="hours">
+                        <p id="hW">00</p>
+                    </div>
+                    <div class="right">
+                        <div class="minutes">
+                            <p id="mW" >00</p>
+                        </div>
+                        <div class="face">
+                            <p class="v-index">II</p>
+                            <p class="h-index">II</p>
+                            <div class="hand">
+                                <div class="hand">
+                                    <div class="second"></div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="bottom">
+                    CODEX
+                </div>
+            </div>
+        </div>
+        <div class="Stopwatch">
+            <div class="top">Online Timer & Stopwatch</div>
+            <div class="timer">
+                <div class="hours time">
+                    <p id="hide" class="" >0</p>
+                    <p id="h">0</p>
+                </div>
+                <span>:</span>
+                <div class="minutes time">
+                    <p id="hide" class="" >0</p>
+                    <p id="m" >0</p>
+                </div>
+                <span>:</span>
+                <div class="seconds time ">
+                    <p id="hide" class="" >0</p>
+                    <p id="s" >0</p>
+                </div>
+                <span>:</span>
+                <div class="milliseconds time" >
+                    <p id="hide" class="" >0</p>
+                    <p id="ms" >0</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="start" >Start</button>
+                <button id="stop" >Pause</button>
+                <button id="reset" >Reset</button>    
+            </div>
+        </div>    
+    </div>
+    <script src="main.js" ></script>
+</body>
+</html>

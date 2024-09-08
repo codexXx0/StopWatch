@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url(./imgs/surface-pro-9-stock-purple-abstract-white-background-3440x1440-9052.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    img {
+        width: 80px;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.watch {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: rgb(64,13,89);
+    background: radial-gradient(circle, rgb(27, 2, 39) 0%, rgba(255, 255, 255, 0.329) 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .watchBody {
+        width: 340px;
+        height: 340px;
+        background-color: #242329;
+        position: absolute;
+        border-radius: 50%;
+        border: 30px solid #1e1e24;
+        left: 70px;
+        top: 75px;
+        shape-outside: circle( 50%);
+        .top {
+            position: relative;
+            width: 100%;
+            height: 25%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-weight: normal;
+            i {
+                font-size: 25px;
+                padding-top: 10px;
+            }
+        }
+        .mid {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            .face {
+                position: relative;
+                bottom: 0;
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                outline: 1px solid #bbbbbb75;
+                box-shadow: inset 0 0 13px #0007;
+            }
+            
+            .second {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background: rgb(0, 0, 0);
+                left: 23px;
+                top: 24px;
+                border-radius: 50%;
+                border: 1px solid #eee;
+                z-index: 3;
+                animation: watch 60s steps(60, end) 0s infinite;
+                -webkit-animation: watch 60s steps(60, end) 0s infinite;
+            }
+            
+            .second::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 25px;
+                left: 3px;
+                bottom: -2px;
+                background: rgb(167, 167, 167);
+                border-radius: 2px;
+            }
+            
+            .second::after {
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                left: 2px;
+                top: 2px;
+                background: #924e4e;
+                border-radius: 50%;
+            }
+            
+            .v-index {
+                position: absolute;
+                color: #c5c5c5;
+                font-size: 11px;
+                font-weight: normal;
+                left: 25px;
+                top: -3px;
+                text-shadow: 0 48px 0 #c5c5c5;
+                z-index: 1
+            }
+            
+            .h-index {
+                position: absolute;
+                color: #c5c5c5;
+                font-size: 11px;
+                font-weight: normal;
+                top: 20px;
+                left: 1px;
+                transform: rotate(-90deg);
+                text-shadow: 0 47px 0 #c5c5c5;
+                z-index: 1;
+            }
+            .hours {
+                width: fit-content;
+                font-size: 130px;
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                .minutes {
+                    width: fit-content;
+                    font-size: 40px;
+                }
+            }
+        }
+        .bottom {
+            position: relative;
+            width: 100%;
+            height: 33%;
+            text-align: center;
+            padding-top: 10px;
+        }
+    }
+}
+@keyframes watch {
+    0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+    100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+}
+
+
+.Stopwatch {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 400px;
+    border: 1px solid #cccecd00;
+    background-color: #2E133A;
+    color: white;
+    font-size: 35px;
+    border-radius:15px;
+    box-shadow:
+        4.5px 4.5px 3.6px rgba(0, 0, 0, 0.024),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        30.1px 30.1px 24.1px rgba(0, 0, 0, 0.046),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+    .top {
+        font-size: 23px;
+        padding-bottom: 20px;
+    }
+    .timer {
+        display: flex;
+        gap: 10px;
+    }
+    .time {
+        display: flex;
+        font-size: 100px;
+    }
+    span {
+        font-size: 85px;
+    }
+    .hide {
+        display: none;
+    }
+    .buttons {
+        display: flex;
+        gap: 10px;
+        button {
+            margin-top: 20px;
+            padding: 8px 10px;
+            color: white;
+            border: 1px solid #E67CD9;
+            background-color: #E67CD9;
+            width: 100px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            -webkit-transition: 0.3s ease-in-out;
+            -moz-transition: 0.3s ease-in-out;
+            -ms-transition: 0.3s ease-in-out;
+            -o-transition: 0.3s ease-in-out;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            font-weight: normal;
+            }
+        button:hover {
+            border-color: #75156a;
+        }
+        #stop {
+            background-color: #dd94d5;
+        }
+        #reset {
+            background-color: #574262;
+            border: 1px solid #574262;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .main {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .Stopwatch {
+        height: 320px;
+    }
+}
+
+@media (max-width: 750px) {
+    .main {
+        justify-content: flex-end;
+    }
+    .Stopwatch {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        .hours,span:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    header {
+        box-shadow:0 0 0 4px solid #E67CD9;
+        margin-bottom: 0px;
+        h1 {
+            font-size: 25px;
+            align-self: center;
+        }
+        img {
+            width: 50px;
+        }
+    }
+    .Stopwatch {
+        padding: 20px;
+        p {
+            font-size: 50px;
+        }
+        span {
+            font-size: 45px;
+        }
+        .buttons {
+            width: 90%;
+            font-size: 15px;
+            justify-content: center;
+        }
+    }
+    .watch {
+        width: 350px;
+        height: 350px;
+        img {
+            width: 350px;
+        }
+        .watchBody {
+            width: 240px;
+            height: 240px;
+            top : 53px ;
+            left :48px;
+            .top {
+                i {
+                    font-size :19px ;
+                }
+                font-size: 15px;
+            }
+            .mid {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                #hW {
+                    font-size: 75px;
+                }
+                #mW {
+                    font-size: 20px;
+                    padding-bottom: 3px;
+                }
+            }
+            .bottom {
+                font-size: 11px;
+                padding-top: 0;
+            }
+        }
+    }
+}
