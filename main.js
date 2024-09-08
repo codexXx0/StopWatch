@@ -14,9 +14,8 @@ let isPaused = false
 let hideP = document.querySelectorAll("#hide")
 
 startBtn.onclick = function () {
-    
-    
-            let startFunc = setInterval(start , 10 )
+
+        let startFunc = setInterval(start , 10 )
             function start() {
                 let millisecondsText = document.getElementById("ms").textContent
                 let secondsText = document.getElementById("s").textContent
@@ -105,25 +104,16 @@ setInterval(() => {
     hoursWatch.textContent =  hoursW  ;
     minutesWatch.textContent = minutesW ;
 
-    console.log(hoursWatch.textContent)
-    console.log(minutesWatch.textContent)
-    console.log(hideWM)
-    console.log(hideWH)
-
     if (hoursWatch.textContent < 10) {
         hideWH.classList.remove("hide")
-        console.log("removed Hours")
     } else {
         hideWH.classList.add("hide")
-        console.log("added Hours")
     }
 
     if (minutesWatch.textContent < 10) {
         hideWM.classList.remove("hide")
-        console.log("removed Minutes")
     } else {
         hideWM.classList.add("hide")
-        console.log("added Minutes")
     }
 
 }, 20)
