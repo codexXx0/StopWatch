@@ -15,6 +15,8 @@ let hideP = document.querySelectorAll("#hide")
 
 startBtn.onclick = function () {
 
+        startBtn.classList.add("hide")
+
         let startFunc = setInterval(start , 10 )
             function start() {
                 let millisecondsText = document.getElementById("ms").textContent
@@ -77,10 +79,12 @@ startBtn.onclick = function () {
 
     stopBtn.onclick = function () {
         isPaused = true
+        startBtn.classList.remove("hide")
         clearInterval(startFunc)
     }
 
     resetBtn.onclick = function () {
+        startBtn.classList.remove("hide")
         clearInterval(startFunc)
         document.getElementById("h").textContent = "0"
         document.getElementById("m").textContent = "0"
